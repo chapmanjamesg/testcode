@@ -1,6 +1,5 @@
 import React from 'react';
 import ContactForm from './components/ContactForm';
-import GridItem from './components/GridItem';
 import ItemList from './components/ItemList';
 import './style/app.css'
 
