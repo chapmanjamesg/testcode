@@ -89,6 +89,7 @@ class ContactForm extends React.Component{
                             type="text"
                             name="subject"
                             onChange={this.handleChange} 
+                            noValidate
                         />
                         {errors.subject.length > 0 && 
                         <span className='error'>{errors.subject}</span>}
@@ -98,6 +99,7 @@ class ContactForm extends React.Component{
                         <textarea 
                             name="message"
                             onChange={this.handleChange}
+                            noValidate
                         />
                         {errors.message.length > 0 &&
                         <span className='error'>{errors.message}</span>}
