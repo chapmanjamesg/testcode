@@ -69,11 +69,11 @@ class ContactForm extends React.Component{
     render(){
         const {errors} = this.state;
         return(
-            <div className="ui container contact">
-                <h3 className="ui header">Contact</h3>
+            <div className="contact">
+                <h3 className="header">Contact</h3>
                 <form className="ui form " onSubmit={this.handleSubmit} noValidate>
-                    <div className="field">
-                        <label>Email</label>
+                    <div className="ui text container field">
+                        <label className="ui grey label">Email</label>
                         <input 
                             type="email" 
                             name="email"
@@ -83,8 +83,8 @@ class ContactForm extends React.Component{
                         {errors.email.length > 0 && 
                         <span className='error'>{errors.email}</span>}
                     </div>
-                    <div className="field">
-                        <label>Subject</label>
+                    <div className="ui text container field">
+                        <label className="ui grey label">Subject</label>
                         <input 
                             type="text"
                             name="subject"
@@ -94,8 +94,8 @@ class ContactForm extends React.Component{
                         {errors.subject.length > 0 && 
                         <span className='error'>{errors.subject}</span>}
                     </div>
-                    <div className="field">
-                        <label>Message</label>
+                    <div className="ui text container field">
+                        <label className="ui grey label">Message</label>
                         <textarea 
                             name="message"
                             onChange={this.handleChange}
@@ -105,7 +105,7 @@ class ContactForm extends React.Component{
                         <span className='error'>{errors.message}</span>}
                         <small>Message must be eight characters in length.</small>
                     </div>
-                    <button className='ui button' type="submit">Submit</button>
+                    <button className='ui black fluid button' type="submit">Submit</button>
                 </form>
             </div>
         )
