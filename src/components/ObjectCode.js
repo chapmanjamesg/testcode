@@ -69,43 +69,49 @@ class ObjectCode extends React.Component{
 
     render(){
         return (
-            <div>
-                <h4>Object 1</h4>
-                <ul>
-                    {
-                        object.objectOne.map((person, id) => {
-                            return (
-                                <li key={id} >
-                                    {person.name}
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
+            <div className="ui grid">
+                <div className="ui list">
+                    <h4>Object 1</h4>
+                    <ul>
+                        {
+                            object.objectOne.map((person, id) => {
+                                return (
+                                    <li key={id} >
+                                        {person.name}
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+                </div>
+                <div className="ui list">
                 <h4>Object 2</h4>
-                <ul>
-                    {
-                        object.objectTwo.map((person, id) => {
-                            return (
-                                <li key={id} >
-                                    {person.name}
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
-                <h4>Object 3</h4>
-                <ul>
-                    {
-                        combined.map((person, id) => {
-                            return (
-                                <li key={id} >
-                                    {person.name}
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
+                    <ul>
+                        {
+                            object.objectTwo.map((person, id) => {
+                                return (
+                                    <li key={id} >
+                                        {person.name}
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+                </div>
+                <div className="ui list">
+                    <h4>Object 3</h4>
+                    <ul>
+                        {
+                            combined.map((person, id) => {
+                                return (
+                                    <li key={id} >
+                                        {person.name}
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+                </div>
             </div>
         )
     }

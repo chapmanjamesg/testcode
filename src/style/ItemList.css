@@ -6,12 +6,25 @@
 }
 
 .container {
-    display: flexbox;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.item {
+    flex-shrink: 3;
+    max-width: 300px;
+    min-width: 100px;
 }
 
 h2 {
     color: grey;
     text-align: center;
+}
+
+img {
+    min-height: 50px;
+    max-height: 100px;
+    min-width: 100px;
+    max-width: 300px;
+    margin-top: 20px;
 }

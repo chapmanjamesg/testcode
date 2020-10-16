@@ -10,18 +10,19 @@ class App extends React.Component {
     return(
       <div className="ui container">
         <h1 className="ui huge header">Header One</h1>
-        <div className="content container">
-            <div className="row">
+        <div className="content ui container">
+            <div className="ui grid">
               <ItemList />
               <ItemList />
               <ItemList />
             </div>
         </div>
+        <br />
         <div className='ui container form'>
           <ContactForm />
         </div>
         <h1 className="ui huge header">Header One</h1>
-        <div className='ui container object'>
+        <div className='ui container'>
           <ObjectCode />
         </div>
       </div>
