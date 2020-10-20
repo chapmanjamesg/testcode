@@ -1,4 +1,3 @@
-import { getAllByAltText } from "@testing-library/react"
 
 const remoteURL = "http://localhost:5002"
 

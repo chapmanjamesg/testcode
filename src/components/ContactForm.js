@@ -1,4 +1,5 @@
 import React from 'react';
+import APIManager from './APIManager';
 
 const validEmail = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
 const validateForm = (errors) => {
@@ -60,8 +61,15 @@ class ContactForm extends React.Component{
         event.preventDefault();
         if(validateForm(this.state.errors)) {
           console.info('Valid Form')
+          const contact ={
+              email: this.state.email,
+              subject: this.state.subject,
+              message: this.state.message
+          }
+          APIManager.post(contact)
+            .then(r => r.json)
         }else{
-          console.error('Invalid Form')
+          alert("Please fill this out correctly!")
         }
       }
 
