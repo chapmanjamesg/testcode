@@ -10,7 +10,7 @@ class App extends React.Component {
   render(){
     return(
       <div className="ui container">
-        <h1 className="ui huge header">Header One</h1>
+        <h1>Header One</h1>
         <div className="content ui container">
             <div className="ui grid">
               <ItemList {...this.props} />
@@ -22,7 +22,7 @@ class App extends React.Component {
         <div className='ui container form'>
           <ContactForm />
         </div>
-        <h1 className="ui huge header">Header One</h1>
+        <h1>Header One</h1>
         <div className='ui container'>
           <ObjectCode />
         </div>

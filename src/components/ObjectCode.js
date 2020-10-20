@@ -104,13 +104,14 @@ class ObjectCode extends React.Component{
                         {
                             combined.map((person, id) => {
                                 return (
-                                    <li key={id} >
-                                        {person.name}
-                                    </li>
+                                        <li key={id} >
+                                            {person.name}
+                                        </li>
                                 )
                             })
                         }
                     </ul>
+                    <label>This was sorted when you rendered in!</label>
                 </div>
             </div>
         )
