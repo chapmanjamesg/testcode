@@ -6,15 +6,16 @@ import './style/app.css'
 
 class App extends React.Component {
 
+
   render(){
     return(
       <div className="ui container">
         <h1 className="ui huge header">Header One</h1>
         <div className="content ui container">
             <div className="ui grid">
-              <ItemList />
-              <ItemList />
-              <ItemList />
+              <ItemList {...this.props} />
+              <ItemList {...this.props} />
+              <ItemList {...this.props} />
             </div>
         </div>
         <br />

@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../style/ItemList.css'
 import GridItem from './GridItem';
+import APIManager from './APIManager'
 
-const ItemList = () => {
-    return (<div className='item-list container'><GridItem /></div>)
+class ItemList extends Component{
+    state = {
+        filler: [],
+    }
+
+    componentDidMount() {
+        APIManager.getAll()
+            .then((filler) =>
+                this.setState({
+                    filler: filler 
+            }))
+            
+    }
+
+    render(){
+        return (
+            <div className='item-list container'>
+                {this.state.filler.map(filler => 
+                    <GridItem key={filler.id} filler={filler} {...this.props}/>
+                )}
+            </div>
+    )}
 };
 
 export default ItemList
