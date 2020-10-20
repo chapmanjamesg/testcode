@@ -4,6 +4,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+-[] Clone this repository <br />
+-[] cd into the directory it creates <br />
+-[] in the api directory, creat a copy of the database.json.example and remove the .example extension <br />
+-[] run npm install and wait for all dependencies to be installed <br />
+-[] in a seperate terminal cd in to the API folder and run json-server --watch db.json --port 5002
+-[] run npm start to verify that installation was successful <br />
+
+
 ### `npm start`
 
 to start this project
